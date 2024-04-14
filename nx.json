@@ -50,6 +50,11 @@
                     "codeCoverage": true
                 }
             }
+        },
+        "@nx/angular:ng-packagr-lite": {
+            "cache": true,
+            "dependsOn": ["^build"],
+            "inputs": ["production", "^production"]
         }
     },
     "generators": {
@@ -57,6 +62,10 @@
             "e2eTestRunner": "none",
             "linter": "eslint",
             "style": "css",
+            "unitTestRunner": "jest"
+        },
+        "@nx/angular:library": {
+            "linter": "eslint",
             "unitTestRunner": "jest"
         }
     }

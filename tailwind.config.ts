@@ -1,9 +1,9 @@
 import type { Config } from 'tailwindcss';
 import { fontFamily } from 'tailwindcss/defaultTheme';
-import { join } from 'path';
 
 const config = {
-    content: [join(__dirname, 'libs/ui/**/!(*.stories|*.spec).{ts,html}')],
+    presets: [require('@spartan-ng/ui-core/hlm-tailwind-preset')],
+    content: [],
     darkMode: ['class'],
     prefix: '',
     theme: {
